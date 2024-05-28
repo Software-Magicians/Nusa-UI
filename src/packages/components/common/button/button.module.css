@@ -1,0 +1,77 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 2.25rem;
+  cursor: pointer;
+  transition: color 0.3s, border-color 0.3s, box-shadow 0.3s;
+  border: 0.125rem solid transparent;
+  background-color: transparent;
+  color: #5e5e5e;
+  overflow: hidden;
+  outline: none;
+  box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.05),
+    inset 0px -10px 20px 0px rgba(0, 0, 0, 0.05),
+    0px 10px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.button:hover,
+.button:focus {
+  color: #5e5e5e;
+  background-color: #007bff;
+  outline: none;
+  border: none;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: scale(0);
+  animation: ripple-effect 0.5s linear;
+}
+
+@keyframes ripple-effect {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.button-primary {
+  background-color: #fff;
+  color: #5e5e5e;
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  background-color: #fff;
+}
+
+.button-outline {
+  background-color: transparent;
+  color: #007bff;
+  border: 0.125rem solid #007bff;
+}
+
+.button-outline:hover,
+.button-outline:focus {
+  background-color: #007bff;
+  color: white;
+}
+
+.icon-start {
+  margin-right: 0.5rem;
+}
+
+.icon-end {
+  margin-left: 0.5rem;
+}
+
+.button-placeholder {
+  display: flex;
+  align-items: center;
+}
