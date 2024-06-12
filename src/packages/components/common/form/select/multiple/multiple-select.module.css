@@ -1,0 +1,79 @@
+.select {
+  position: relative;
+  width: 100%;
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+  border: solid 1px;
+  height: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background: #ffffff;
+  flex-wrap: wrap;
+}
+
+.select-input {
+  flex-grow: 1;
+  border: none;
+  width: auto;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  min-width: 150px;
+}
+
+.select-svg {
+  cursor: pointer;
+  margin-left: 2;
+  width: 1rem;
+  height: 1rem;
+  transition: all 0.3s;
+}
+
+.select-svg-rotate {
+  cursor: pointer;
+  margin-left: 2;
+  width: 1rem;
+  height: 1rem;
+}
+
+.select-list-container {
+  position: absolute;
+  text-align: left;
+  border: solid 1px;
+  padding: 0.25rem;
+  width: calc(100% - 0.6rem);
+  margin-top: 0.25rem;
+  background: #ffffff;
+  z-index: 10;
+  max-height: 15rem;
+  overflow-y: auto;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional for better UI */
+}
+
+.select-list-item {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.select-list-item:hover {
+  background: #00000010;
+}
+
+.badge {
+  display: flex;
+  margin-right: 0.25rem;
+  align-items: center;
+  padding: 0.1rem 0.5rem;
+  border: solid 1px;
+  color: #000000;
+  border-radius: 0.25rem;
+}
+
+.badge-remove {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}

@@ -1,42 +1,61 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+}
+body {
+  margin: 0;
+  padding: 1rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.base-input {
+  font-family: "Segoe UI", sans-serif;
+  margin: 1em 0 20em 0;
+  max-width: 190px;
+  position: relative;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.base-input .input {
+  font-size: 100%;
+  padding: 0.75rem;
+  outline: none;
+  border: 0.1rem solid rgb(200, 200, 200);
+  background-color: transparent;
+  border-radius: 20px;
+  height: 3rem;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.base-input .label-input {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0.75rem;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(100, 100, 100);
+}
+.base-input .input::placeholder {
+  color: transparent;
 }
 
-.card {
-  padding: 2em;
+.base-input .input:focus::placeholder {
+  color: rgb(100, 100, 100);
 }
 
-.read-the-docs {
-  color: #888;
+.base-input .input:valid::placeholder {
+  color: rgb(100, 100, 100);
+}
+
+.base-input :is(.input:focus, .input:valid) ~ .label-input {
+  transform: translateY(-50%) translateX(-20%) scale(0.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: #ffff;
+}
+
+.base-input :is(.input:focus, .input:valid) {
+  border-color: rgb(150, 150, 200);
 }

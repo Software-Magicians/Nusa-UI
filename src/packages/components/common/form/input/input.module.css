@@ -1,0 +1,35 @@
+.input-container {
+  display: flex;
+  align-items: center;
+  border: solid 1px;
+  height: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background: #ffffff;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+input,
+.input-item {
+  flex-grow: 1;
+  border: none;
+  width: 100%;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.input-container.error {
+  border-color: red;
+}
+
+.input-item.error {
+  border-color: red;
+  color: red;
+}
+
+label.error-label {
+  color: red;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}

@@ -1,0 +1,39 @@
+.radio-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+input[type="radio" i] {
+  display: none;
+}
+
+.radio-button {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #000;
+  margin-right: 8px;
+  margin: 0.25rem;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.radio-button::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+}
+
+input[type="radio"]:checked + .radio-button::after {
+  transform: translate(-50%, -50%) scale(1);
+}

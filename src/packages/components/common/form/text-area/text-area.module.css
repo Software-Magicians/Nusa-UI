@@ -1,0 +1,19 @@
+.text-area-container {
+  display: flex;
+  align-items: center;
+  border: solid 1px;
+  height: auto;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background: #ffffff;
+  flex-wrap: wrap;
+}
+
+textarea,
+.text-area-item {
+  flex-grow: 1;
+  border: none;
+  width: 100%;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}

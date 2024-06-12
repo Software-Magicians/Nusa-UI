@@ -1,0 +1,41 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0.5rem;
+  font-size: 16px;
+  color: #333;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border-radius: 0.25rem;
+  border: 1px solid #333;
+  margin-right: 8px;
+  display: inline-block;
+  position: relative;
+}
+
+.checkmark svg {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.checkmark svg path {
+  transition: all 0.3s ease;
+}
+
+.input:checked + .checkmark svg {
+  display: block;
+}
+
+.input:checked + .checkmark svg path {
+  stroke-dashoffset: 0;
+}
